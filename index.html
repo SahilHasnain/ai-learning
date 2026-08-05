@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Join the TinyLearn waitlist and make learning feel smaller, clearer, and more doable."
+    />
+    <title>TinyLearn | Join the waitlist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: '#172033',
+              paper: '#f8f6f0',
+              coral: '#ee705c',
+              sun: '#f6c955',
+              mint: '#b9ded0'
+            },
+            fontFamily: {
+              display: ['Georgia', 'serif'],
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+            },
+            boxShadow: {
+              soft: '0 24px 70px rgba(23, 32, 51, 0.13)'
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      html { scroll-behavior: smooth; }
+      body { background: #f8f6f0; }
+      .dot-grid {
+        background-image: radial-gradient(rgba(23, 32, 51, 0.16) 1px, transparent 1px);
+        background-size: 18px 18px;
+      }
+      .text-balance { text-wrap: balance; }
+    </style>
+  </head>
+  <body class="font-sans text-ink antialiased">
+    <main class="relative min-h-screen overflow-hidden">
+      <div class="pointer-events-none absolute -right-24 -top-28 h-80 w-80 rounded-full bg-sun/45 blur-2xl"></div>
+      <div class="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-mint/50 blur-3xl"></div>
+
+      <nav class="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-7 lg:px-10">
+        <a href="#top" class="flex items-center gap-3" aria-label="TinyLearn home">
+          <span class="grid h-10 w-10 place-items-center rounded-xl bg-ink text-lg font-bold text-paper shadow-lg shadow-ink/10">T</span>
+          <span class="text-lg font-bold tracking-tight">TinyLearn</span>
+        </a>
+        <a href="#why" class="hidden text-sm font-semibold text-ink/60 transition hover:text-ink sm:block">Why TinyLearn?</a>
+      </nav>
+
+      <section id="top" class="relative mx-auto grid max-w-7xl items-center gap-16 px-6 pb-20 pt-10 lg:grid-cols-[1.05fr_0.95fr] lg:px-10 lg:pb-28 lg:pt-20">
+        <div class="max-w-2xl">
+          <div class="mb-7 inline-flex items-center gap-2 rounded-full border border-ink/10 bg-white/60 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-ink/60 backdrop-blur">
+            <span class="h-2 w-2 rounded-full bg-coral"></span>
+            Early access is opening soon
+          </div>
+          <h1 class="text-balance font-display text-5xl leading-[0.98] tracking-[-0.045em] sm:text-7xl lg:text-[5.8rem]">
+            Learn one small thing. <span class="text-coral">Feel a lot smarter.</span>
+          </h1>
+          <p class="mt-8 max-w-xl text-lg leading-8 text-ink/65 sm:text-xl">
+            TinyLearn turns big, intimidating questions into clear explanations and quick quizzes you can actually finish.
+          </p>
+          <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm font-semibold text-ink/60">
+            <span class="flex items-center gap-2"><span class="text-coral">01</span> Ask anything</span>
+            <span class="hidden text-ink/20 sm:block">/</span>
+            <span class="flex items-center gap-2"><span class="text-coral">02</span> Get clarity</span>
+            <span class="hidden text-ink/20 sm:block">/</span>
+            <span class="flex items-center gap-2"><span class="text-coral">03</span> Keep going</span>
+          </div>
+        </div>
+
+        <div class="relative mx-auto w-full max-w-md lg:ml-auto">
+          <div class="absolute -left-8 -top-8 z-10 grid h-20 w-20 rotate-[-9deg] place-items-center rounded-2xl bg-coral text-center text-xs font-bold uppercase leading-4 text-white shadow-xl shadow-coral/25">
+            Small<br />steps<br />count
+          </div>
+          <div class="rounded-[2rem] border border-ink/10 bg-white p-7 shadow-soft sm:p-9">
+            <div class="mb-8 flex items-start justify-between">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-[0.18em] text-coral">The first step</p>
+                <h2 class="mt-2 font-display text-3xl tracking-tight">Save your spot.</h2>
+              </div>
+              <span class="text-2xl text-sun" aria-hidden="true">✦</span>
+            </div>
+            <form id="waitlist-form" class="space-y-5">
+              <div>
+                <label for="name" class="mb-2 block text-sm font-semibold">Your name</label>
+                <input id="name" name="name" type="text" autocomplete="name" placeholder="Ada Lovelace" required class="w-full rounded-xl border border-ink/15 bg-paper px-4 py-3.5 text-sm outline-none transition placeholder:text-ink/30 focus:border-coral focus:ring-4 focus:ring-coral/10" />
+              </div>
+              <div>
+                <label for="email" class="mb-2 block text-sm font-semibold">Email address</label>
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required class="w-full rounded-xl border border-ink/15 bg-paper px-4 py-3.5 text-sm outline-none transition placeholder:text-ink/30 focus:border-coral focus:ring-4 focus:ring-coral/10" />
+              </div>
+              <button type="submit" class="group flex w-full items-center justify-between rounded-xl bg-ink px-5 py-4 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-coral focus:outline-none focus:ring-4 focus:ring-coral/20">
+                <span id="submit-label">Join the waitlist</span>
+                <span class="text-lg transition-transform group-hover:translate-x-1" aria-hidden="true">-&gt;</span>
+              </button>
+              <p id="form-error" class="hidden text-center text-sm font-semibold text-coral" role="alert"></p>
+              <p class="text-center text-xs leading-5 text-ink/45">No spam. Just a note when TinyLearn is ready for you.</p>
+            </form>
+            <div id="success-message" class="hidden rounded-xl bg-mint/45 p-5 text-center" role="status">
+              <div class="mx-auto mb-3 grid h-10 w-10 place-items-center rounded-full bg-ink text-lg text-white">✓</div>
+              <h3 class="font-bold">You are on the list.</h3>
+              <p class="mt-1 text-sm leading-6 text-ink/65">We will let you know when your tiny learning habit can begin.</p>
+            </div>
+          </div>
+          <div class="dot-grid absolute -bottom-8 -right-8 -z-10 h-32 w-32 rounded-2xl opacity-60"></div>
+        </div>
+      </section>
+
+      <section id="why" class="relative border-t border-ink/10 bg-white/45 px-6 py-20 lg:px-10 lg:py-24">
+        <div class="mx-auto max-w-7xl">
+          <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
+            <div>
+              <p class="text-xs font-bold uppercase tracking-[0.18em] text-coral">Designed for real life</p>
+              <h2 class="mt-4 max-w-md font-display text-4xl leading-tight tracking-[-0.03em] sm:text-5xl">Your curiosity does not need a two-hour commitment.</h2>
+            </div>
+            <div class="grid gap-4 sm:grid-cols-3">
+              <article class="rounded-2xl border border-ink/10 bg-paper p-6">
+                <span class="text-2xl text-coral">01</span>
+                <h3 class="mt-12 font-bold">Clear by default</h3>
+                <p class="mt-3 text-sm leading-6 text-ink/60">Complex ideas, explained without the jargon wall.</p>
+              </article>
+              <article class="rounded-2xl border border-ink/10 bg-paper p-6">
+                <span class="text-2xl text-coral">02</span>
+                <h3 class="mt-12 font-bold">Tiny by design</h3>
+                <p class="mt-3 text-sm leading-6 text-ink/60">Short lessons that fit between the things you already do.</p>
+              </article>
+              <article class="rounded-2xl border border-ink/10 bg-paper p-6">
+                <span class="text-2xl text-coral">03</span>
+                <h3 class="mt-12 font-bold">Made to stick</h3>
+                <p class="mt-3 text-sm leading-6 text-ink/60">Quick quizzes turn a passing thought into something you remember.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-8 text-xs font-semibold text-ink/45 sm:flex-row sm:items-center sm:justify-between lg:px-10">
+        <span>© 2026 TinyLearn</span>
+        <span>Make room for one more question.</span>
+      </footer>
+    </main>
+
+    <script>
+      const API_URL = 'https://ai-learning-api.decklysahil.workers.dev';
+      const form = document.getElementById('waitlist-form');
+      const successMessage = document.getElementById('success-message');
+      const submitButton = form.querySelector('button[type="submit"]');
+      const submitLabel = document.getElementById('submit-label');
+      const formError = document.getElementById('form-error');
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        formError.classList.add('hidden');
+        submitButton.disabled = true;
+        submitLabel.textContent = 'Saving your spot...';
+
+        const formData = new FormData(form);
+        try {
+          const response = await fetch(`${API_URL}/waitlist`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              name: formData.get('name'),
+              email: formData.get('email')
+            })
+          });
+          const data = await response.json();
+
+          if (!response.ok) {
+            throw new Error(data.error?.message || 'Could not join the waitlist.');
+          }
+
+          form.classList.add('hidden');
+          successMessage.classList.remove('hidden');
+        } catch (error) {
+          formError.textContent = error instanceof Error
+            ? error.message
+            : 'Could not join the waitlist. Please try again.';
+          formError.classList.remove('hidden');
+          submitButton.disabled = false;
+          submitLabel.textContent = 'Join the waitlist';
+        }
+      });
+    </script>
+  </body>
+</html>
