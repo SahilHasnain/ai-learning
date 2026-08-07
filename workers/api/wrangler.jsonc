@@ -1,0 +1,21 @@
+{
+  "name": "ai-learning-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-07-01",
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "GEMINI_MODEL": "gemini-2.5-flash-lite",
+    "GROQ_MODEL": "openai/gpt-oss-20b",
+    "PRIMARY_PROVIDER": "groq",
+    "ALLOWED_ORIGIN": "",
+    "MAX_DAILY_REQUESTS_PER_USER": "40"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "AI_USAGE",
+      "id": "24913783afc244598c30daad945c0ab1"
+    }
+  ]
+}
