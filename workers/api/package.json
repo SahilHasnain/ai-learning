@@ -1,0 +1,19 @@
+{
+  "name": "ai-learning-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260730.1",
+    "typescript": "~5.9.2",
+    "vitest": "^3.2.4",
+    "wrangler": "^4.20.5"
+  }
+}
